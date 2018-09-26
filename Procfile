@@ -1,1 +1,1 @@
-web: gunicorn pocmailgunpython:app --log-file=-
+web: gunicorn pocmailgunpython:app --log-file -
