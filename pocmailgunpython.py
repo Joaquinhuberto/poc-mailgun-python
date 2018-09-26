@@ -3,9 +3,9 @@ import requests
 
 app = Flask(__name__)
 
-@app.route('/newlead')
-def pocmailgunpython(request):
-    if request.method == 'POST':
-        data = request.POST
-        return data
-    return 'Hello World!'
+
+@app.route('/newlead/<dealerid>', methods=['GET', 'POST'])
+def pocmailgunpython(dealerid):
+    content = request.json
+    print content
+    return 'Hello World! - ' + dealerid
